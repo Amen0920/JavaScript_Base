@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+
+    <script>   
+        //변수의 유효범위(Scope)
+        // var a = 100; // 전역변수 
+
+        // console.log('함수 밖에서 출력한 a : '+ a);
+
+        // function sample1(){
+        //     var b = 200;  // 지역변수 
+        //     console.log('sample1 함수에서 출력한 a : '+ a);
+        //     console.log('sample1 함수에서 출력한 b : '+ b);
+        // }
+
+        // sample1();
+        // console.log('함수 밖에서 출력한 b : '+b);
+        //=====================================================//
+
+        // var a = 100;
+        // function sample1(){
+        //     var a ='sample1 내부의 a';
+        //     var b = 200;
+        //     console.log(a);
+        // }
+        // sample1();
+        // console.log(a);
+
+        //=======================================================//
+
+        // function sample1(){
+        //     var a = 'sample 1 내부의 a ';
+        //     var b = 200; //지역변수 
+        //     console.log(a);
+
+        //     function sample2(){
+        //         var c =100;
+        //         console.log(b);
+        //         console.log('sample2 함수 c : '+c)
+        //     }
+        //     sample2();
+        //     console.log(c);
+        // }
+        // sample1();
+
+        // ==================================================//
+
+
+        var configMap = {
+            deviceSize : null,
+            total : 0
+            
+        }
+
+        console.log(configMap);
+        console.log(configMap.deviceSize);
+        console.log(configMap.total);
+
+        
+
+
+
+    </script>
+    
+</body>
+</html>
