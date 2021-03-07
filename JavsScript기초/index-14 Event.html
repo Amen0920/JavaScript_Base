@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초</title>
+    <style>
+        .btn{
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="main-title">
+        Event
+    </h1>
+    <ul class="list-m">
+        <li class="list">
+            <a class="link-google" href="https://google.com">Google</a>
+        </li>
+    </ul>
+    <button class="btn">클릭하세요</button>
+
+    <script>
+        var btn = document.querySelector('.btn');
+        var mainTitle = document.querySelector('#main-title');
+
+        function btnClickHandler(){
+            mainTitle.style.background = 'dodgerblue'
+            //자바스크립트에서 css 를 담당하는 객체 style
+        }
+
+        btn.addEventListener('click',btnClickHandler); 
+        // btn.onclick = btnClickHandler;
+        
+
+        
+    </script>
+</body>
+</html>
