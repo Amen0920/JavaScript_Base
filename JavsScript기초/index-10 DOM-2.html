@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imglist{
+            display: inline-block;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">
+        DOM (Document Object Model)
+        <small>small</small>
+    </h1>
+    <ul>
+        <li class="imglist"><img src="../images/3.png"> </li>
+        <li class="imglist"><img src="../images/4.png"> </li>
+        <li class="imglist"><img src="../images/6.png"> </li>
+    </ul>
+
+    <script>
+        var mailTitle = document.querySelector('#main-title small');
+        // console.log(mailTitle);
+
+        var imglist = document.querySelector('.imglist');
+        // console.log(imglist);
+
+        var imglists = document.querySelectorAll('.imglist');
+        // console.log(imglists);
+
+        for(var i = 0; i < imglists.length; i++){
+            imglists[i].style.border = '1px solid red';
+        }
+    </script>
+</body>
+</html>

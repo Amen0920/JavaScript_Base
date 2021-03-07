@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1 id="main-title">
+        DOM (Document Object Model)
+    </h1>
+    <ul class="list-m">
+        <li class="list">
+            <a class="link-google" href="https://google.com">Google</a>
+        </li>
+    </ul>
+
+
+    <script>
+        var listElem = document.createElement('li');
+        listElem.innerHTML = '<span>자바스크립트으</span>'
+        
+        var list_m = document.querySelector('.list-m');
+        list_m.appendChild(listElem);
+    </script>
+</body>
+</html>

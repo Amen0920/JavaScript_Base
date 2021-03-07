@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초</title>
+    <style>
+        .link-google{
+            color:red;
+        }
+        .special{
+            background: pink;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 id="main-title">
+        DOM (Document Object Model)
+    </h1>
+    <ul>
+        <li class="list">
+            <a class="link-google" href="https://google.com">Google</a>
+        </li>
+    </ul>
+
+    <script>
+        var link = document.querySelector('.list a');
+        //link.className = 'special' 클래스가 덮어씌워져서 잘사용하지 않음.
+        link.classList.add('special','foo');
+        setTimeout(function(){
+            link.classList.remove('link-google');
+        },2000);
+
+        console.log(link.classList.contains('special'))
+    </script>
+</body>
+</html>
