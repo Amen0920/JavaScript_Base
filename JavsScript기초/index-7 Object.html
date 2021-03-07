@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초</title>
+</head>
+<body>
+    <h1>Object</h1>
+
+    <script>
+        var person = {};
+        person.username = '동네70'; //속성(property)
+        person.age = 12;
+        person.introduce =  function (){      
+            console.log( '안녕 ? 나는 '+ this.username+'이야. 나이는 '+ this.age +'이야.')
+        }  // 메서드(method)
+
+        person.introduce();
+
+        var person2 = {
+            username : 'Zena',
+            age : 20,
+            introduce: function (){
+                console.log('안녕? 나는 Zena야. 나이는 20살이야.')
+            } 
+        }
+
+        var person3 = {
+            username : 'XXX',
+            introduce: function (){
+                console.log('안녕? 나는 '+this.username+'야. 나이는 20살이야.')
+            } 
+        }
+        //person2.introduce();
+
+        
+    </script>
+</body>
+</html>
