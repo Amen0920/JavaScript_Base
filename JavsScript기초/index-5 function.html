@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초</title>
+</head>
+<body>
+    <h1>JavaScript</h1>
+
+
+    <script>
+        function sample(){
+            return;
+            console.log('함수실행')
+        }
+        sample();
+
+        // a와 b는 더하기 함수의 매개변수(parameter)
+        function 더하기(a, b){
+            console.log( a+b );
+        }
+        // 더하기(1,100);
+
+        function 인사(이름) {
+            console.log('안녕 나는 '+ 이름 + '이야.')
+        }
+        // 인사('일분');
+
+        
+
+        var a = -100;
+        function sample2(){
+            if(a>0){
+                return;
+            }
+            console.log('샘플2함수 실행!')
+        }
+        // sample2();
+
+        function 더하기2(a, b){
+            return a+b; //리턴값
+        }
+        console.log( 더하기2(100,200) );
+    </script>
+
+</body>
+</html>
