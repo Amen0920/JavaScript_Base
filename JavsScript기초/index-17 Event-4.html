@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background: yellow;
+            
+        }
+        .menu{
+            display:flex;
+
+        }
+        .menu-link{
+            margin:.5em;
+            padding:.5em;
+            color:#fff;
+            text-decoration: none;
+            background:dodgerblue;
+            list-style: none;
+        }
+        .menu-active{
+            background: orange;
+        }
+        .menu{
+            background: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="main-title">
+        Event
+    </h1>
+    
+    <nav class="menu">
+        <a href="#" class="menu-link" data-menu="1">menu 1</a>
+        <a href="#" class="menu-link" data-menu="2">menu 2</a>
+        <a href="#" class="menu-link" data-menu="3">menu 3</a>
+    </nav>
+
+    <script>
+        var menu = document.querySelector('.menu');
+        var currentMenu;
+
+        function activate(elem){
+            elem.classList.add('menu-active');
+            currentMenu = elem;
+        }
+
+        function inactivate(elem){
+            elem.classList.remove('menu-active');
+        }
+
+        function clickHandler(e){
+           
+            if(currentMenu) {
+                inactivate(currentMenu);
+            }
+            activate(e.target);
+        }
+
+        menu.addEventListener('click',clickHandler);
+    </script>
+</body>
+</html>

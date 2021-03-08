@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            background: yellow;
+            
+        }
+        .menu{
+            display:flex;
+
+        }
+        .menu-link{
+            margin:.5em;
+            padding:.5em;
+            color:#fff;
+            text-decoration: none;
+            background:dodgerblue;
+            list-style: none;
+        }
+        .menu-active{
+            background: orange;
+        }
+        .menu{
+            background: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1 id="main-title">
+        Event
+    </h1>
+    
+    <nav class="menu">
+        <a href="#" class="menu-link" data-menu="1">menu 1</a>
+        <a href="#" class="menu-link" data-menu="2">menu 2</a>
+        <a href="#" class="menu-link" data-menu="3">menu 3</a>
+    </nav>
+
+    <script>
+        var menu = document.querySelector('.menu');
+        var currentMenu;
+        function clickHandler(e){
+            //e -> 이벤트객체
+            //이벤트가 발생된 객체로 여러정보를 가지고있음(어디 클릭했는지, 좌표 등등 
+            
+            //console.log(e.currentTarget);
+            //console.log(this);
+
+            //e.currentTarget == this 
+
+            //console.log(e.target);
+            if(currentMenu) {
+                currentMenu.classList.remove('menu-active');
+            }
+            e.target.classList.add('menu-active');
+            currentMenu = e.target;
+            
+            
+        }
+
+        menu.addEventListener('click',clickHandler);
+    </script>
+</body>
+</html>

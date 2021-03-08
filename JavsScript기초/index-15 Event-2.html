@@ -43,8 +43,15 @@
 
         //개발자들끼리 해당함수가 이벤트리스너로 사용하는 함수의 경우 관례적으로 맨앞에 on이나 맨뒹 Handler,
         //Listener를 붙임.
-        function clickMenuHandler(){
 
+        //현재 활성화된 메뉴를 담을 변수
+        var currentMenu;
+        function clickMenuHandler(){
+            if(currentMenu){ //currentMenu 가 값이 있는지 체크.
+                currentMenu.classList.remove('menu-active');
+            }
+
+            
             //클릭한 메뉴만 오렌지색으로 나머지메뉴는 파란색으로 되게하기. 
             // for(var i=0; i <menuLinks.length;i++){
             //     menuLinks[i].classList.remove('menu-active');
@@ -59,15 +66,16 @@
             // 해당방법도 속도적인 문제가 있음. ( Dom 스크립트는 자바스크립트중 속도가 하위권.)
             //  querySelector를 쓰면 Dom스크립트로 일단존재하는지 확인해야함..
 
-            
-
-
             this.classList.add('menu-active');
+            currentMenu=this;
+  
         }
 
         for(var i=0; i < menuLinks.length; i++){
+            //addEventListener 가 많으면 많을수록 페이지 성능에 악영향을 미침
             menuLinks[i].addEventListener('click',clickMenuHandler);
         }
+        
         
     </script>
 </body>
